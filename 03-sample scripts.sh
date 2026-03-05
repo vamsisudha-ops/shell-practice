@@ -3,7 +3,7 @@
 # Assign values to variables (no spaces around the = sign)
 NAME="Alice"
 GREETING="Hello, world!"
-COUNT=30
+COUNT=50
 
 # Access variables using the $ prefix
 echo "$GREETING My name is $NAME."
