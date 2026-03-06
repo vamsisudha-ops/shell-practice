@@ -1,7 +1,7 @@
     #!/bin/bash
 
-    PERSON1=$1
-    PERSON2=$2
+    PERSON1=Rajesh
+    PERSON2=Rakesh
     
     echo "person1 name is: $PERSON1"
     echo "person2 name is: $PERSON2"
