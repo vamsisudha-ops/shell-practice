@@ -1,5 +1,4 @@
 #!/bin/bash
 
-export COURSE="DevSecOps with AWS"
-echo $COURSE 
+echo COURSE # here course is a variable
 echo "course name is: $COURSE"
