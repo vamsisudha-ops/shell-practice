@@ -24,11 +24,11 @@ else
     echo "Installing Nginx is SUCCESS"
 fi 
 
-dnf install mongodb-mongosh -y
+dnf install python3 -y
 
 if [ $? -ne 0 ]; then    #validating either mongodb is installed or not based on previous command output 
-    echo "ERROR: Installing mongodb-mongosh is failure"
+    echo "ERROR: Installing python3 is failure"
     exit 1
 else
-    echo "Installing mongodb-mongosh is SUCCESS"
+    echo "Installing python3 is SUCCESS"
 fi 
