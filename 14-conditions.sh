@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash  # $? special variable which stores the output of previous command
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then 
