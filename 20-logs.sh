@@ -30,28 +30,28 @@ VALIDATE(){ # funtions receive inputs through args just like shell script args
     fi 
 }
 
-dnf list installed mysql &>>$LOGS_FILE
+dnf list installed mysql &>>$LOG_FILE
 #Install if it is not found
 if [ $? -ne 0 ]; then
-    dnf install mysql -y &>>$LOGS_FILE
+    dnf install mysql -y &>>$LOG_FILE
     VALIDATE $? "MYSQL"
 else 
     echo -e "MySQL already exist ... $Y SKIPPING $N" | tee -a $LOG_FILE
 fi     
 
-dnf list installed nginx &>>$LOGS_FILE
+dnf list installed nginx &>>$LOG_FILE
 #Install if it is not found
 if [ $? -ne 0 ]; then
-    dnf install nginx -y &>>$LOGS_FILE
+    dnf install nginx -y &>>$LOG_FILE
     VALIDATE $? "Nginx"
 else 
     echo -e "Nginx already exist ... $Y SKIPPING $N" | tee -a $LOG_FILE   # -a means append the output to the Logsfile
 fi     
 
-dnf list installed python3 &>>$LOGS_FILE
+dnf list installed python3 &>>$LOG_FILE
 #Install if it is not found
 if [ $? -ne 0 ]; then
-    dnf install python3 -y &>>$LOGS_FILE
+    dnf install python3 -y &>>$LOG_FILE
     VALIDATE $? "python3"
 else 
     echo -e "Python3 already exist ... $Y SKIPPING $N" | tee -a $LOG_FILE
