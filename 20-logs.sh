@@ -11,9 +11,9 @@ if [ $USERID -ne 0 ]; then
 fi 
 LOGS_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" # /var/log/shell-script/16-logs.log
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log" # /var/log/shell-script/16-logs.log  --> giving full path here 
 
-mkdir -p $LOGS_FOLDER
+mkdir -p $LOGS_FOLDER   # -p checks already directory is there or not, if it's not automatically it create a directory
 echo "Script started executed at: $(date)" | tee -a $LOG_FILE  #TO APPEND THE ECHO STATEMENT IN LOGS FILE
 
 if [ $USERID -ne 0 ]; then 
@@ -45,7 +45,7 @@ if [ $? -ne 0 ]; then
     dnf install nginx -y &>>$LOGS_FILE
     VALIDATE $? "Nginx"
 else 
-    echo -e "Nginx already exist ... $Y SKIPPING $N" | tee -a $LOG_FILE
+    echo -e "Nginx already exist ... $Y SKIPPING $N" | tee -a $LOG_FILE   # -a means append the output to the Logsfile
 fi     
 
 dnf list installed python3 &>>$LOGS_FILE
