@@ -33,7 +33,7 @@ VALIDATE(){ # funtions receive inputs through args just like shell script args
 #@ -- special variable to pass values/inputs in a dynamic way 
 
 for package in $@
-do{
+do
     # check package is installed or not
     dnf list installed package $package &>>$LOG_FILE
 
