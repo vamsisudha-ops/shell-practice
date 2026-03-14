@@ -2,7 +2,7 @@
 set -e   ## e-exit, immediately exit if error occurs
 
 error(){
-        echo "There is an error"
+        echo "There is an error $LINENO, Command is: $BASH_COMMAND"
 }
 
 trap error ERR
