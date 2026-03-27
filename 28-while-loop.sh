@@ -13,7 +13,7 @@ done
 
  echo "Times up!"
 
-while IFS= read -r line; do
+while IFS= read -r line; do    ### IFS Internal Field Seperator 
     # Process each line here
     echo "Processing line: $line"
     # Example: you can perform other operations with the $line variable
