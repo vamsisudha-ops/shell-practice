@@ -13,13 +13,13 @@ done
 
  echo "Times up!"
 
-while IFS= read -r line; do    ### IFS Internal Field Seperator 
+#while IFS= read -r line; do    ### IFS Internal Field Seperator 
     # Process each line here
-    echo "Processing line: $line"
+    #echo "Processing line: $line"
     # Example: you can perform other operations with the $line variable
     # For instance:
     # some_command "$line"
     # if [[ "$line" == "specific_text" ]]; then
     #    echo "Found specific text!"
     # fi
-done < 25-script-1.sh
+#done < 25-script-1.sh
